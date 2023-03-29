@@ -1,3 +1,4 @@
+import { useCallback, useEffect } from "react";
 import { SearchContainer } from "./styles";
 
 type SearchProps = {
@@ -11,6 +12,20 @@ export default function Search({
   setSearchText,
   onSearch,
 }: SearchProps): JSX.Element {
+  function eventListener(e: any) {
+    if (e.key === "Enter") {
+      onSearch();
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keypress", eventListener);
+
+    return () => {
+      document.removeEventListener("keypress", eventListener);
+    };
+  });
+
   return (
     <SearchContainer>
       <input

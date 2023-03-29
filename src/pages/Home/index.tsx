@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import notFoundImg from "../../assets/images/not-found.png";
 import Card from "../../components/Card";
 import Pagination from "../../components/Pagination";

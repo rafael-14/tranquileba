@@ -23,14 +23,12 @@ export default function useCharacter() {
   const [character, setCharacter] = useState<Character | any>();
   const [isLoading, setIsLoading] = useState(true);
   const { id }: any = useParams();
-  const { favorites, updateFavorites } = useContext(FavoritesContext);
+  const { updateFavorites } = useContext(FavoritesContext);
 
   useEffect(() => {
     async function loadCharacter() {
       try {
         setIsLoading(true);
-        console.log("oi");
-        console.log(id);
         const { data } = await getCharacter(Number(id));
         setCharacter(data);
         setIsLoading(false);
@@ -43,6 +41,5 @@ export default function useCharacter() {
     isLoading,
     character,
     updateFavorites,
-    favorites,
   };
 }

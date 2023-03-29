@@ -11,7 +11,7 @@ export const CardContainer = styled.div`
   width: 300px;
   overflow: hidden;
   border-radius: 8px;
-  color: ${({theme}) => theme.colors.blue};
+  color: ${({ theme }) => theme.colors.blue};
   box-shadow: 0px 0px 15px -5px;
   transition: 0.3s;
   animation: ease-in;
@@ -47,7 +47,7 @@ export const CardContent = styled.div`
   }
 
   > div h3 {
-    color: ${({theme}) => theme.colors.yellow};
+    color: #f2ec25;
     font-size: 28px;
     margin-bottom: 0.5rem;
   }
