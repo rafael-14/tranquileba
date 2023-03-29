@@ -1,28 +1,25 @@
-import { ChangeEvent } from "react";
 import { SearchContainer } from "./styles";
 
 type SearchProps = {
   searchText: string;
   setSearchText: React.Dispatch<React.SetStateAction<string>>;
+  onSearch: () => void;
 };
 
 export default function Search({
   searchText,
   setSearchText,
+  onSearch,
 }: SearchProps): JSX.Element {
-  async function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    const value = e.target.value;
-    setSearchText(value);
-  }
-
   return (
     <SearchContainer>
       <input
         type="text"
         placeholder="Pesquise seu personagem..."
         value={searchText}
-        onChange={handleChange}
+        onChange={(e) => setSearchText(e.target.value)}
       />
+      <button onClick={onSearch}>Pesquisar</button>
     </SearchContainer>
   );
 }

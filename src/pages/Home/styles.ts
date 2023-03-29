@@ -8,6 +8,7 @@ export const NotFoundDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 24px;
 
   > h3 {
     font-size: 2.2rem;

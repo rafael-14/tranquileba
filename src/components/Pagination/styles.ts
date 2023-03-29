@@ -13,6 +13,7 @@ export default styled.div`
     transition: background-color 0.3s;
     border-radius: 8px;
     margin-bottom: 8px;
+    cursor: pointer;
     &:hover {
       background: ${({ theme }) => theme.colors.yellow};
       transition: all 0.2s ease-in;
