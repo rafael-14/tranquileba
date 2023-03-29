@@ -29,13 +29,15 @@ export default function useCharacter() {
     async function loadCharacter() {
       try {
         setIsLoading(true);
-        const { data } = await getCharacter(id);
+        console.log("oi");
+        console.log(id);
+        const { data } = await getCharacter(Number(id));
         setCharacter(data);
         setIsLoading(false);
       } catch {}
     }
     loadCharacter();
-  }, []);
+  }, [id]);
 
   return {
     isLoading,
