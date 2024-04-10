@@ -27,6 +27,8 @@ export default function Pagination({
     );
   }, [currentPage]);
 
+  if (pages === 1) return null;
+
   return (
     <Container>
       {currentPage > 2 && (
