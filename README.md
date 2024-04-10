@@ -13,7 +13,10 @@ Na aplicação foi utilizada a API pública https://rickandmortyapi.com/document
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 - **React JS** 
 - **TypeScript** 
-- **Styled Components** 
+- **Styled Components**
+
+## :computer: SITE
+Você pode acessar a aplicação online [aqui](https://tranquileba.vercel.app/).
 
 ## 🤔 Como executar o projeto
 ```bash
